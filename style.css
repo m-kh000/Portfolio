@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+body {
+  display: grid;
+  place-items: center;
+  min-height: 120vh;
+  font-family: "Birthstone", cursive;
+  font-weight: 400;
+  font-style: normal;
+margin: 20px;
+background :linear-gradient(to bottom ,#f5caa4, #e8b996, #c88b65, #a57449);
+}
+
+h1 {
+    color: #5b2e12;
+    text-align: center;
+    font-size: 170px;
+}
+
+p {
+    color: #7b4422;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+icon-button ,button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4286f400;
+  font-family: Arial Narrow;
+  color:#7b4422;
+  font-size: 30px;
+}
+
+button:active .icon-button:hover {
+  transform: scale(0.98);
+}
+
+#mode {
+margin-left: auto;
+margin-right: 0;
+}
+body.darkmode  {
+  background :linear-gradient(to bottom ,#733c1a, #815128,#b87b46 );
+  h1 {
+    color:#eec7a5;
+}
+  p,a {
+    color:#e9b78b;
+}
+ icon-button ,button{
+  color:#d18e54;
+}
+}
+
+
+.icon-button:hover, button:hover {
+  background-color: #00000025;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+a {
+  color:#7b4422;            
+  text-decoration: none; 
+}
+a:hover {
+  color:#633518;            
+  text-decoration: none; 
+}
+#contact{
+    p{font-family: Arial Narrow;
+    font-size: 20px;
+    text-align: left;
+}
+    margin-left:0;
+    margin-right:auto;
+}

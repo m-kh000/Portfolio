@@ -3,7 +3,9 @@
 body {
   display: grid;
   place-items: center;
-  min-height: 120vh;
+  height: 100%;
+  min-height: -webkit-fill-available;
+  min-height: 100vh;
   font-family: "Birthstone", cursive;
   font-weight: 400;
   font-style: normal;

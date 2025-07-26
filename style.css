@@ -19,14 +19,11 @@ h1 {
     text-align: center;
     font-size: 8.5vw;
 }
-#test{
-  font-size: clamp(48px, 8.5vw ,170px);
-}
 
 p {
     color: #7b4422;
     text-align: center;
-    font-size: 40px;
+    font-size: 2vw;
 }
 
 
@@ -41,7 +38,7 @@ icon-button ,button{
   background-color: #4286f400;
   font-family: Arial Narrow;
   color:#7b4422;
-  font-size: 30px;
+  font-size: 1.55vw ;
 }
 
 button:active .icon-button:hover {
@@ -95,5 +92,4 @@ min-width: 100vw;
  @media (max-width: 800px){
   body {
   margin: 8px;
-  font-size:smaller ;
   }} 

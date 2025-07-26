@@ -17,7 +17,10 @@ background :linear-gradient(to bottom ,#f5caa4, #e8b996, #c88b65, #a57449);
 h1 {
     color: #5b2e12;
     text-align: center;
-    font-size: 170px;
+    font-size: 8.5vw;
+}
+#test{
+  font-size: clamp(48px, 8.5vw ,170px);
 }
 
 p {
@@ -81,15 +84,16 @@ a:hover {
   text-decoration: none; 
 }
 #contact{
-    p{font-family: Arial Narrow;
+    p{
+    font-family: Arial Narrow;
     font-size: 20px;
     text-align: left;
 }
-width: 1100px;
+min-width: 100vw;
 }
 
-@media (max-width: 800px){
+/* @media (max-width: 800px){
   body {
-  margin: 10px;
+  margin: 8px;
   font-size:smaller ;
-  }}
+  }} */

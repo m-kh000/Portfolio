@@ -23,7 +23,7 @@ h1 {
 p {
     color: #7b4422;
     text-align: center;
-    font-size: 2vw;
+    font-size: 2.4vw;
 }
 
 
@@ -38,7 +38,7 @@ icon-button ,button{
   background-color: #4286f400;
   font-family: Arial Narrow;
   color:#7b4422;
-  font-size: 1.55vw ;
+  font-size: 1.6vw ;
 }
 
 button:active .icon-button:hover {
@@ -83,7 +83,7 @@ a:hover {
 #contact{
     p{
     font-family: Arial Narrow;
-    font-size: 20px;
+    font-size: 1.5vw ;
     text-align: left;
 }
 min-width: 100vw;

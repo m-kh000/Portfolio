@@ -92,7 +92,7 @@ min-width: 87vw;
  @media (max-width: 800px){
   body {
   margin: 5px;
-  height: 150%;
+  height: 200%;
   min-height: 100vh;
   font-size: 160%;
   }} 

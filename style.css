@@ -14,13 +14,13 @@ background :linear-gradient(to bottom ,#f5caa4, #e8b996, #c88b65, #a57449);
 h1 {
     color: #5b2e12;
     text-align: center;
-    font-size: 170px;
+    font-size: 8vw;
 }
 
 p {
     color: #7b4422;
     text-align: center;
-    font-size: 40px;
+    font-size: 2vw;
 }
 
 
@@ -35,7 +35,7 @@ icon-button ,button{
   background-color: #4286f400;
   font-family: Arial Narrow;
   color:#7b4422;
-  font-size: 30px;
+  font-size: 1.5vw;
 }
 
 button:active .icon-button:hover {
@@ -44,7 +44,7 @@ button:active .icon-button:hover {
 
 #mode {
 margin-left: auto;
-margin-right: 0;
+margin-right:0.4%;
 }
 body.darkmode  {
   background :linear-gradient(to bottom ,#5f3922, #4e341d,#342314 );
@@ -79,16 +79,16 @@ a:hover {
 }
 #contact{
     p{font-family: Arial Narrow;
-    font-size: 20px;
+    font-size: 1vw;
     text-align: left;
 }
-width: 1100px;
+width: 90vw;
 }
 
 @media (max-width: 800px){
   body {
-  min-height: 100dvh;
+  min-height: 200dvh;
   min-height: -webkit-fill-available;
-  margin: 10px;
-  font-size:smaller ;
+  margin: 8px;
+  font-size:150% ;
   }}

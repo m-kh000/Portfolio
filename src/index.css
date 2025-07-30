@@ -1,25 +1,82 @@
 @import "tailwindcss";
-/* @theme{
 
+@theme{
+--color-latte:#846E51;
+--color-cream:#F8E6D3;
+--color-coffee:#5A3F61;
+--color-blackcoffee:#271C14;
+--color-darkblue:#1B1C20;
 }
 
 @layer base{
-  body{
-  @apply
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f3F3CD;
+  color:#EEDDB2;
+  
+}
+body.darkmode {
+  background: #1B1C20;
+  color: inherit;
+}
+
+body.darkmode p, body.darkmode h1, body.darkmode h2, body.darkmode div{
+  color: #E4B9F0;
+}
+body.darkmode #mira {
+text: #B59470
+color: #CE97DD;
+}
+body.darkmode #toolbar {
+  background: #2B2E34;
+}
+body.darkmode button{
+  @apply  bg-[#09090a4a]
+}
+
+#mira{
+  @apply text-[8.4vw] text-[#6d4b76];
+}
+
+  html{
+    font-family:"DM Serif Text",serif;
   }
-  h1{
-  @apply 
+  div{
+    @apply py-[1vw] px-[0.45vw] text-coffee font-bold text-[1.4vw] z-10;
   }
   
+  h1{
+  @apply text-coffee font-bold text-[2.5vw] ;
+  }
   p{
-  @apply 
+      @apply px-[0.6vw] text-coffee font-bold text-[1.4vw] text-shadow-xs;
+  }
+  li{
+      @apply flex place-items-center-safe;
+  }
+  button{
+    @apply  round  cursor-pointer bg-[#8c79322e]
+  }
+  #toolbar{
+    @apply bg-[#fffff7];
+  }
+  #contact{
+    @apply text-[0.6vw] opacity-85;
   }
   }
 
+/*
 @layer components{
   
 }
-
-@utility margins{
-  
-} */
+*/
+@utility round{
+  @apply rounded-2xl;
+} 
+@utility icon{
+  @apply w-[1.7vw] h-[1.7vw] place-self-start
+}
+@utility img{
+  @apply w-[56vw] h-[42vw] place-self-start ;
+}

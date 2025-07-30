@@ -56,7 +56,7 @@ body.darkmode button{
       @apply flex place-items-center-safe;
   }
   button{
-    @apply  round  cursor-pointer bg-[#8c79322e]
+    @apply  round  cursor-pointer bg-[#8c79322e] p-[0.5vw] text-center hover:scale-105 transition-all;
   }
   #toolbar{
     @apply bg-[#fffff7];

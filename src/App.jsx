@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ScrollableCards from "./ScrollableCards";
 function ContactForm() {
   // State to store the message
   const [message, setMessage] = useState('');
@@ -10,12 +11,7 @@ setMessage(e.target.value);
 
   // Handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents page reload
-    console.log('Message submitted:', message);
-
-    alert('Thank you! Your message has been sent.');
-
-    // Clear the form after submission
+    e.preventDefault();
     setMessage('');
   }};
 
@@ -43,9 +39,9 @@ function App() {
           onClick={toggleMode}
         >
           {isDarkMode ? (
-            <img src="/moon.png" alt="Moon" className="icon" />
+            <img src="/icons/moon.png" alt="Moon" className="icon" />
           ) : (
-            <img src="/sun.png" alt="Sun" className="icon" />
+            <img src="/icons/sun.png" alt="Sun" className="icon" />
           )}
         </button>
 
@@ -62,23 +58,23 @@ function App() {
           <br />
           <ul className="">
             <li className="flex items-start gap-[0.5vw]">
-              <img src="/ai.png" className="icon " />
+              <img src="/icons/ai.png" className="icon " />
               <p>AWS Educate Machine Learning Foundations</p>
             </li>
             <li className="flex items-start gap-[0.5vw]">
-              <img src="/ai.png" className="icon " />
+              <img src="/icons/ai.png" className="icon " />
               <p>Introducing Generative AI with AWS</p>
             </li>
             <li className="flex items-start gap-[0.5vw]">
-              <img src="/ai.png" className="icon " />
+              <img src="/icons/ai.png" className="icon " />
               <p>Object Oriented Programming in Java - Duke University</p>
             </li>
             <li className="flex items-start gap-[0.5vw]">
-              <img src="/ai.png" className="icon " />
+              <img src="/icons/ai.png" className="icon " />
               <p>CS50 - Harvard</p>
             </li>
             <li className="flex items-start gap-[0.5vw]">
-              <img src="/paint.png" className="icon " />
+              <img src="/icons/paint.png" className="icon " />
               <p>Fundamentals of Graphic Design - CalArts</p>
             </li>
           </ul>
@@ -86,11 +82,12 @@ function App() {
       </div>
       <div id="rightside" className="p-0  w-[78vw]">
       <div className="z-20 absolute m-[3vw] place-items-center-safe "><p id="mira" >hi<li/>it's Mira Khnefes</p>
-            <p className="">- A passionate ITE student always ready to work, create, and comunicate.</p>
+            <p >- A passionate ITE student always ready to work, create, and comunicate.</p>
             <div><a href = "#contact">
-              <button className="">contcate me</button>
+              <button >contcate me</button>
             </a></div>
             
+      <ScrollableCards/>
 <div className="float-left w-full">
   <p id="contact" className="text-[0.1vw]">
     <a href="https://mail.google.com/mail/u/0/?hl=nl#inbox" target="_blank">email: marmorakh2000@gmail.com</a>
@@ -123,16 +120,15 @@ function App() {
       <div className=" p-0 "><p><a href="https://chat.deepseek.com/" target="_blank">@ Need Help</a></p>
       </div>
         
-        
       </div>     
 
         <div id="image"className="absolute  z-0 p-0 ">
           {isDarkMode ? (<div className="w-[78vw]">
-                <img src="circledark.png" className="img " />
-                <img src="circledark.png" className="img mt-20 rotate-180 float-right" /></div>
+                <img src="/iconscircledark.png" className="img " />
+                <img src="/iconscircledark.png" className="img mt-20 rotate-180 float-right" /></div>
               ) : (<div className="w-[78vw]">
-                <img src="circlelight.png" className="img " />
-                <img src="circlelight.png" className="img mt-20 rotate-180 float-right" /></div>
+                <img src="/iconscirclelight.png" className="img " />
+                <img src="/iconscirclelight.png" className="img mt-20 rotate-180 float-right" /></div>
               )}
         </div>
     </div></div>

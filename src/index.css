@@ -1,11 +1,7 @@
 @import "tailwindcss";
 
 @theme{
---color-latte:#846E51;
---color-cream:#F8E6D3;
---color-coffee:#5A3F61;
---color-blackcoffee:#271C14;
---color-darkblue:#1B1C20;
+--color-vio:#5A3F61;
 }
 
 @layer base{
@@ -15,6 +11,15 @@ body {
   background: #f3F3CD;
   color:#EEDDB2;
   
+}
+.card {
+  min-width: 250px;
+  flex: 0 0 auto;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fffff0;
+  text-align: center;
+  @apply round;
 }
 body.darkmode {
   background: #1B1C20;
@@ -34,23 +39,26 @@ body.darkmode #toolbar {
 body.darkmode button{
   @apply  bg-[#09090a4a]
 }
-
+body.darkmode .card {
+  @apply bg-[#2B2E34] text-white;
+}
 #mira{
   @apply text-[8.4vw] text-[#6d4b76];
 }
 
   html{
     font-family:"DM Serif Text",serif;
+    scroll-behavior: smooth;
   }
   div{
-    @apply py-[1vw] px-[0.45vw] text-coffee font-bold text-[1.4vw] z-10;
+    @apply py-[1vw] px-[0.45vw] text-vio font-bold text-[1.4vw] z-10;
   }
   
   h1{
-  @apply text-coffee font-bold text-[2.5vw] ;
+  @apply text-vio font-bold text-[2.5vw] ;
   }
   p{
-      @apply px-[0.6vw] text-coffee font-bold text-[1.4vw] text-shadow-xs;
+      @apply px-[0.6vw] text-vio font-bold text-[1.4vw] text-shadow-xs;
   }
   li{
       @apply flex place-items-center-safe;
@@ -59,18 +67,14 @@ body.darkmode button{
     @apply  round  cursor-pointer bg-[#8c79322e] p-[0.5vw] text-center hover:scale-105 transition-all;
   }
   #toolbar{
-    @apply bg-[#fffff7];
+    @apply bg-[#fffff0];
   }
   #contact{
     @apply text-[0.6vw] opacity-85;
   }
   }
 
-/*
-@layer components{
-  
-}
-*/
+
 @utility round{
   @apply rounded-2xl;
 } 
@@ -79,4 +83,46 @@ body.darkmode button{
 }
 @utility img{
   @apply w-[56vw] h-[42vw] place-self-start ;
+}
+
+
+
+.scrollable-cards-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.cards-container {
+  width: 70vw;
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
 }

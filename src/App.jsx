@@ -52,27 +52,27 @@ function App() {
         </h1>
 
         <br />
-        <div className="text-left">
+        <div className="text-left items-start gap-[7px] ">
           <p>Courses I've completed</p>
           <br />
-          <ul className="">
-            <li className="flex items-start gap-[7px]">
+    <ul >
+            <li  >
               <img src="/icons/ai.png" className="icon " />
-              <p>AWS Educate Machine Learning Foundations</p>
+              <p >AWS Educate Machine Learning Foundations</p>
             </li>
-            <li className="flex items-start gap-[7px]">
+            <li  >
               <img src="/icons/ai.png" className="icon " />
               <p>Introducing Generative AI with AWS</p>
             </li>
-            <li className="flex items-start gap-[7px]">
+            <li  >
               <img src="/icons/ai.png" className="icon " />
               <p>Object Oriented Programming in Java - Duke University</p>
             </li>
-            <li className="flex items-start gap-[7px]">
+            <li  >
               <img src="/icons/ai.png" className="icon " />
               <p>CS50 - Harvard</p>
             </li>
-            <li className="flex items-start gap-[7px]">
+            <li  >
               <img src="/icons/paint.png" className="icon " />
               <p>Fundamentals of Graphic Design - CalArts</p>
             </li>

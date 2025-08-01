@@ -15,7 +15,6 @@ function ScrollableCards() {
 
   return (
     <div className="scrollable-cards-section">
-      <h2>My Journey</h2>
       <div className="cards-container">
         {cardData.map((data, index) => (
           <Card 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ScrollableCards from "./ScrollableCards";
-import Courses from "./courses";;
+import Courses from "./Courses";;
 
 function ContactForm() {
   const [message, setMessage] = useState('');
@@ -55,7 +55,7 @@ function App() {
           </button>
 
           <h1>
-            a little bit <br />
+            a bit <br />
             about myself
           </h1>
 

@@ -5,16 +5,16 @@ import Card from './Card'; // Assuming you've saved the Card component from earl
 function ScrollableCards() {
   // Data for each card
   const cardData = [
-    { title: 'Projects', imgSrc: '/icons/projects.png', text: 'Check out my latest development projects.' },
-    { title: 'Achievements', imgSrc: '/icons/achievements.png', text: 'Highlights of my milestones and recognitions.' },
-    { title: 'Studies', imgSrc: '/icons/studies.png', text: 'Academic background and ongoing learning.' },
-    { title: 'Certificates', imgSrc: '/icons/certificates.png', text: 'Certifications from courses and programs.' },
-    { title: 'Hobbies', imgSrc: '/icons/hobbies.png', text: 'Personal interests and creative outlets.' },
-    { title: 'Work Experience', imgSrc: '/icons/work.png', text: 'Professional journey and roles held.' },
+    { title: 'Projects', text: 'Check out my latest development projects.' },
+    { title: 'Achievements', text: 'Comming soon. stay tuned!' },
+    { title: 'Studies', text: 'Academic background and ongoing learning.' },
+    { title: 'Certificates', text: 'Certifications from courses and programs.' },
+    { title: 'Work Experience', text: 'Comming soon. stay tuned!' },
+    { title: 'Hobbies', text: 'Personal interests and creative outlets.' },
   ];
 
   return (
-    <div className="scrollable-cards-section">
+    <div className="scrollable-cards-section p=10">
       <div className="cards-container">
         {cardData.map((data, index) => (
           <Card 

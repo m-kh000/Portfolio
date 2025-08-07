@@ -19,9 +19,16 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background-color: #fffff0;
     text-align: center;
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+    transform-origin: center;
+    transform: translateZ(0);
+  /* Optional: hint to browser that it will be transformed */
+    will-change: transform;
     @apply round;
   }
-
+  .card:hover{
+    transform: scale(1.1) translateZ(0);
+  }
   #mira {
     @apply text-[118px] text-[#6d4b76]; /* 8.4vw → 8.4×14 ≈ 118px */
   }
@@ -48,7 +55,9 @@
   }
 
   button {
-    @apply round cursor-pointer bg-[#8c79322e] p-[7px] text-center hover:scale-105 transition-all; /* 0.5vw → 7px */
+    transform: translateZ(0);
+    will-change: transform;
+    @apply round cursor-pointer bg-[#8c79322e] p-[7px] text-[20] text-center hover:scale-105 hover:translate-z-0 transition-all; /* 0.5vw → 7px */
   }
 
   a:hover{
@@ -111,7 +120,8 @@ body.darkmode {
 }
 
 .cards-container {
-  width: 980px; /* 70vw → 980px (70×14) */
+  width: 70vw; /* Or use max-width for responsiveness */
+  max-width: 1200px;
   display: flex;
   overflow-x: auto;
   gap: 1rem;

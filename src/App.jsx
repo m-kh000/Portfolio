@@ -55,7 +55,7 @@ function App() {
           </button>
 
           <h1>
-            a little bit <br />
+            a bit <br />
             about myself
           </h1>
 

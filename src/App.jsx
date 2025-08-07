@@ -1,138 +1,139 @@
 import React, { useEffect, useState } from "react";
 import ScrollableCards from "./ScrollableCards";
+import Courses from "./courses";;
+
 function ContactForm() {
-  // State to store the message
   const [message, setMessage] = useState('');
 
-  // Handle input changes
   const handleChange = (e) => {
-setMessage(e.target.value);
+    setMessage(e.target.value);
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     setMessage('');
-  }};
+  };
+}
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     return localStorage.getItem("darkMode") === "true";
   });
 
-  useEffect(() => {
-    document.body.classList.toggle("darkmode", isDarkMode);
-    localStorage.setItem("darkMode", isDarkMode);
-  }, [isDarkMode]);
+  function MyComponent() {
+    const [name, setName] = useState("");
+    const [comma, setComma] = useState(false);
 
-  const toggleMode = () => {
-    setIsDarkMode((prev) => !prev);
-  };
+    function handleNameChange(event) {
+      event.target.value == "" ? setComma(false) : setComma(true)
+      setName(event.target.value);
+    }
 
-  return (
-    <div className="flex">
-      <div id="toolbar"className="flex-col w-[20vw] m-0 px-[0.1vw] pt-[5vw]  h-full round text-center">
-        <button
-          id="mode"
-          className=" round "
-          aria-label={isDarkMode ? "lightmode" : "darkmode"}
-          onClick={toggleMode}
-        >
-          {isDarkMode ? (
-            <img src="/icons/moon.png" alt="Moon" className="icon" />
-          ) : (
-            <img src="/icons/sun.png" alt="Sun" className="icon" />
-          )}
-        </button>
+    useEffect(() => {
+      document.body.classList.toggle("darkmode", isDarkMode);
+      localStorage.setItem("darkMode", isDarkMode);
+    }, [isDarkMode]);
 
-        <br />
-        <br />
-        <h1>
-          a little bit <br />
-          about myself
-        </h1>
+    const toggleMode = () => {
+      setIsDarkMode((prev) => !prev);
+    };
 
-        <br />
-        <div className="text-left">
-          <p>Courses I've completed</p>
+    return (
+      <div className="flex">
+        <div id="toolbar" className="flex-col w-[40vw] md:w-[280px] m-0 px-[6px] pt-[70px] h-full round text-center">
+          <button
+            id="mode"
+            className=" round mb-7"
+            aria-label={isDarkMode ? "lightmode" : "darkmode"}
+            onClick={toggleMode}
+          >
+            {isDarkMode ? (
+              <img src="/icons/moon.png" alt="Moon" className="icon" />
+            ) : (
+              <img src="/icons/sun.png" alt="Sun" className="icon" />
+            )}
+          </button>
+
+          <h1>
+            a little bit <br />
+            about myself
+          </h1>
+
           <br />
-          <ul className="">
-            <li className="flex items-start gap-[0.5vw]">
-              <img src="/icons/ai.png" className="icon " />
-              <p>AWS Educate Machine Learning Foundations</p>
-            </li>
-            <li className="flex items-start gap-[0.5vw]">
-              <img src="/icons/ai.png" className="icon " />
-              <p>Introducing Generative AI with AWS</p>
-            </li>
-            <li className="flex items-start gap-[0.5vw]">
-              <img src="/icons/ai.png" className="icon " />
-              <p>Object Oriented Programming in Java - Duke University</p>
-            </li>
-            <li className="flex items-start gap-[0.5vw]">
-              <img src="/icons/ai.png" className="icon " />
-              <p>CS50 - Harvard</p>
-            </li>
-            <li className="flex items-start gap-[0.5vw]">
-              <img src="/icons/paint.png" className="icon " />
-              <p>Fundamentals of Graphic Design - CalArts</p>
-            </li>
-          </ul>
+          <div className="text-left items-start gap-[7px] ">
+            <Courses/>
+          </div>
         </div>
-      </div>
-      <div id="rightside" className="p-0  w-[78vw]">
-      <div className="z-20 absolute m-[3vw] place-items-center-safe "><p id="mira" >hi<li/>it's Mira Khnefes</p>
+        <div id="rightside" className="p-0 w-[1902px] md:w-[1092px]">
+          <div className="z-20 absolute m-[42px] place-items-center-safe ">
+            {/* ✅ Fix 1: Remove <li/> inside <p> */}
+            <p id="mira">{`hi${comma ? `, ${name}` : ''}`}<li/> it's Mira Khnefes</p>
             <p >- A passionate ITE student always ready to work, create, and comunicate.</p>
+            <p className="my-28">
+              I wanna get to know you too.<br/>
+              <input 
+                value={name} 
+                onChange={handleNameChange} 
+                type="text"  
+                placeholder="Could you type your name:" 
+              />
+            </p>         
             <div><a href = "#contact">
               <button >contcate me</button>
             </a></div>
             
-      <ScrollableCards/>
-<div className="float-left w-full">
-  <p id="contact" className="text-[0.1vw]">
-    <a href="https://mail.google.com/mail/u/0/?hl=nl#inbox" target="_blank">email: marmorakh2000@gmail.com</a>
-    <li>phone: +963994222167</li>
-    <li>working remotely</li>
-  
-  <form 
-  action="https://formspree.io/f/xyzppzrd" 
-  method="POST"
-  data-success-redirect="https://chat.deepseek.com/"
-  >
-  <label htmlFor="message">Something wrong? Send a message:</label>
-  <textarea 
-    id="message" 
-    name="message"
-    className="block mt-[0.15vw] p-[0.3vw] border border-gray-600 rounded w-[20vw]" 
-    rows="4" 
-    placeholder="Enter your message here..."
-    required
-  />
-  <button 
-    type="submit" 
-    className="mt-[0.3vw] round"
-  >
-    Submit
-  </button>
-</form>
-</p></div>
+          <ScrollableCards/>
+          
+          {/* ✅ Fix 2: Move <form> outside of <p> */}
+          <div id="contact" className="text-[15px] float-left w-full">
+              <a href="https://mail.google.com/mail/u/0/?hl=nl#inbox" target="_blank">email: marmorakh2000@gmail.com</a>
+              <br />
+              <span>phone: +963994222167</span><br />
+              <span>working remotely</span>
+           
+          {/* Form moved outside the <p> */}
+          <form 
+            action="https://formspree.io/f/xyzppzrd" 
+            method="POST"
+            data-success-redirect="https://chat.deepseek.com/"
+          >
+            <label htmlFor="message">Something wrong? Send a message:</label>
+            <textarea 
+              id="message" 
+              name="message"
+              className="block mt-[2px] p-[4px] border border-gray-600 rounded w-[280px]" 
+              rows="4" 
+              placeholder="Enter your message here..."
+              required
+            />
+            <button 
+              type="submit" 
+              className="mt-[4px] round"
+            >
+              Submit
+            </button>
+          </form>
+          </div>
+          <div className=" p-0 "><p><a href="https://chat.qwen.ai/c/29d202f2-57b2-4b27-a2be-b1f8fb4f116f  " target="_blank">@ Need Help</a></p>
+          </div>
+            
+          </div>     
 
-      <div className=" p-0 "><p><a href="https://chat.deepseek.com/" target="_blank">@ Need Help</a></p>
+          <div id="image" className="absolute  z-0 p-0 ">
+            {isDarkMode ? (<div className="w-[1092px]">
+                  <img src="/icons/circledark.png" className="img " />
+                  <img src="/icons/circledark.png" className="img mt-20 rotate-180 float-right" /></div>
+                ) : (<div className="w-[1092px]">
+                  <img src="/icons/circlelight.png" className="img " />
+                  <img src="/icons/circlelight.png" className="img mt-20 rotate-180 float-right" /></div>
+                )}
+          </div>
       </div>
-        
-      </div>     
+      </div>
+    );
+  }
 
-        <div id="image"className="absolute  z-0 p-0 ">
-          {isDarkMode ? (<div className="w-[78vw]">
-                <img src="/iconscircledark.png" className="img " />
-                <img src="/iconscircledark.png" className="img mt-20 rotate-180 float-right" /></div>
-              ) : (<div className="w-[78vw]">
-                <img src="/iconscirclelight.png" className="img " />
-                <img src="/iconscirclelight.png" className="img mt-20 rotate-180 float-right" /></div>
-              )}
-        </div>
-    </div></div>
-  );
+  return <MyComponent />;
 }
 
 export default App;

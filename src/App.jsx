@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ScrollableCards from "./ScrollableCards";
-import Courses from "./courses";
+import Courses from "./courses";;
 
 function ContactForm() {
   const [message, setMessage] = useState('');

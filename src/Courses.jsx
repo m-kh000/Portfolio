@@ -1,26 +1,27 @@
 import React from 'react';
-
+import ai from '/icons/ai.png';
+import paint from '/icons/paint.png';
 function Courses() {
   // Array of courses with icon and text
   const coursesData = [
     {
-      icon: '/icons/ai.png',
+      icon: ai,
       text: 'AWS Educate Machine Learning Foundations'
     },
     {
-      icon: '/icons/ai.png',
+      icon: ai,
       text: 'Introducing Generative AI with AWS'
     },
     {
-      icon: '/icons/ai.png',
+      icon: ai,
       text: 'Object Oriented Programming in Java - Duke University'
     },
     {
-      icon: '/icons/ai.png',
+      icon: ai,
       text: 'CS50 - Harvard'
     },
     {
-      icon: '/icons/paint.png',
+      icon: paint,
       text: 'Fundamentals of Graphic Design - CalArts'
     }
   ];

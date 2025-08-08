@@ -3,7 +3,7 @@ import ai from '/icons/ai.png';
 import paint from '/icons/paint.png';
 function Courses() {
   // Array of courses with icon and text
-  console.log(typeof a );
+
   const coursesData = [
     {
       icon: ai,

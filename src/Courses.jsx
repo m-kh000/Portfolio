@@ -3,7 +3,7 @@ import ai from '/icons/ai.png';
 import paint from '/icons/paint.png';
 function Courses() {
   // Array of courses with icon and text
-  console.log(typeof a );
+
   const coursesData = [
     {
       icon: ai,
@@ -29,13 +29,12 @@ function Courses() {
 
   return (
     <div>
-      <p>Courses I've completed</p>
-      <br />
+      <p className='mb-7'>Courses I've completed</p>
       <ul>
         {coursesData.map((course, index) => (
           <li key={index}>
             <img src={course.icon} className="icon" alt="" />
-            <p>{course.text}</p>
+            <p className='text-[17px]'>{course.text}</p>
           </li>
         ))}
       </ul>

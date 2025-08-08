@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import ScrollableCards from "./ScrollableCards";
 import Courses from "./Courses";
 import moon from '/icons/moon.png';
-const t = typeof moon;
-console.log(t);
+import sun from '/icons/sun.png';
+import clight from '/icons/circlelight.png';
+import cdark from '/icons/circledark.png';
+
 function ContactForm() {
   const [message, setMessage] = useState('');
 
@@ -42,7 +44,7 @@ function App() {
 
     return (
       <div className="flex">
-        <div id="toolbar" className="flex-col w-[40vw] md:w-[280px] m-0 px-[6px] pt-[70px] h-full round text-center">
+        <div id="toolbar">
           <button
             id="mode"
             className=" round mb-7"
@@ -52,7 +54,7 @@ function App() {
             {isDarkMode ? (
               <img src = {moon} alt="Moon" className="icon" />
             ) : (
-              <img src="/icons/sun.png" alt="Sun" className="icon" />
+              <img src={sun} alt="Sun" className="icon" />
             )}
           
           </button>
@@ -122,13 +124,13 @@ function App() {
             
           </div>     
 
-          <div id="image" className="absolute  z-0 p-0 ">
+          <div id="image" className="z-0 p-0 ">
             {isDarkMode ? (<div className="w-[1092px]">
-                  <img src="/icons/circledark.png" className="img " />
-                  <img src="/icons/circledark.png" className="img mt-20 rotate-180 float-right" /></div>
+                  <img src={cdark} className="img " />
+                  <img src={cdark} className="img mt-20 rotate-180 float-right" /></div>
                 ) : (<div className="w-[1092px]">
-                  <img src="/icons/circlelight.png" className="img " />
-                  <img src="/icons/circlelight.png" className="img mt-20 rotate-180 float-right" /></div>
+                  <img src={clight} className="img " />
+                  <img src={clight} className="img mt-20 rotate-180 float-right" /></div>
                 )}
           </div>
       </div>

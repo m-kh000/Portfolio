@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ScrollableCards from "./ScrollableCards";
-import Courses from "./Courses";;
-
+import Courses from "./Courses";
+import moon from '/icons/moon.png';
+const t = typeof moon;
+console.log(t);
 function ContactForm() {
   const [message, setMessage] = useState('');
 
@@ -48,10 +50,11 @@ function App() {
             onClick={toggleMode}
           >
             {isDarkMode ? (
-              <img src="/icons/moon.png" alt="Moon" className="icon" />
+              <img src = {moon} alt="Moon" className="icon" />
             ) : (
               <img src="/icons/sun.png" alt="Sun" className="icon" />
             )}
+          
           </button>
 
           <h1>

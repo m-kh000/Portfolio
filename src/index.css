@@ -8,8 +8,8 @@
   body {
     margin: 0;
     min-height: 100vh;
-    background: #f3F3CD;
     color: #EEDDB2;
+    @apply bg-[#f6f6e9] md:bg-[#f3F3CD];
   }
 
   .card {
@@ -39,7 +39,7 @@
   }
 
   div {
-    @apply py-[14px] px-[6px] text-vio font-bold text-[20px] z-10; /* 1vw→14px, 0.45vw→6px, 1.4vw→20px */
+    @apply py-[14px] px-[6px] text-vio font-bold z-10; /* 1vw→14px, 0.45vw→6px, 1.4vw→20px */
   }
 
   h1 {
@@ -47,11 +47,11 @@
   }
 
   p {
-    @apply px-[8px] text-vio font-bold text-[20px] text-shadow-xs; /* 0.6vw→8px, 1.4vw→20px */
+    @apply  text-vio font-bold text-[20px] text-shadow-xs; /* 0.6vw→8px, 1.4vw→20px */
   }
 
   li {
-    @apply flex place-items-center-safe;
+    @apply flex place-items-center-safe py-1.5;
   }
 
   button {
@@ -64,7 +64,7 @@
     opacity:0.70;
   }
   #toolbar {
-    @apply bg-[#fffff0];
+    @apply bg-[#fffff0] flex-col w-[60vw] md:w-[280px] m-0 px-[1px] pt-[70px] h-full round text-center;
   }
 
   #contact {
@@ -107,7 +107,7 @@ body.darkmode {
 }
 
 @utility icon {
-  @apply w-[24px] h-[24px] place-self-start; /* 1.7vw → 24px */
+  @apply w-[23px] h-[23px] m-1 place-self-start; /* 1.7vw → 24px */
 }
 
 @utility img {
@@ -136,13 +136,6 @@ body.darkmode {
   display: none;
 }
 
-.card img {
-  border:solid;
-  width: 290px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-}
 
 .card h2 {
   font-size: 1.2rem;

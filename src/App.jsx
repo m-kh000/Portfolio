@@ -44,7 +44,7 @@ function App() {
 
     return (
       <div className="flex">
-        <div id="toolbar" className="flex-col w-[40vw] md:w-[280px] m-0 px-[6px] pt-[70px] h-full round text-center">
+        <div id="toolbar">
           <button
             id="mode"
             className=" round mb-7"
@@ -124,7 +124,7 @@ function App() {
             
           </div>     
 
-          <div id="image" className="absolute  z-0 p-0 ">
+          <div id="image" className="z-0 p-0 ">
             {isDarkMode ? (<div className="w-[1092px]">
                   <img src={cdark} className="img " />
                   <img src={cdark} className="img mt-20 rotate-180 float-right" /></div>

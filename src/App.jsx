@@ -69,8 +69,8 @@ function App() {
             <Courses/>
           </div>
         </div>
-        <div id="rightside" className="p-0 w-[1902px] md:w-[1092px]">
-          <div className="z-20 absolute m-[42px] place-items-center-safe ">
+        <div id="rightside" className="p-0 max-w-[310px]">
+          <div className="z-20 absolute m-[15px] place-items-center-safe ">
             {/* ✅ Fix 1: Remove <li/> inside <p> */}
             <p id="mira">{`hi${comma ? `, ${name}` : ''}`}<li/> it's Mira Khnefes</p>
             <p >- A passionate ITE student always ready to work, create, and comunicate.</p>
@@ -90,8 +90,8 @@ function App() {
           <ScrollableCards/>
           
           {/* ✅ Fix 2: Move <form> outside of <p> */}
-          <div id="contact" className="text-[15px] float-left w-full">
-              <a href="mailto:marmorakh2000@gmail.com">Send Email</a><br />
+          <div id="contact" >
+              <a href="mailto:marmorakh2000@gmail.com" target="_blank" rel = "noopener noreferrer">Send Email</a><br />
               <span>phone: +963994222167</span><br />
               <span>working remotely</span>
            
@@ -99,13 +99,12 @@ function App() {
           <form 
             action="https://formspree.io/f/xyzppzrd" 
             method="POST"
-            data-success-redirect="https://chat.deepseek.com/"
           >
             <label htmlFor="message">Something wrong? Send a message:</label>
             <textarea 
               id="message" 
               name="message"
-              className="block mt-[2px] p-[4px] border border-gray-600 rounded w-[280px]" 
+              className="block mt-[2px] p-[4px] border border-gray-600 rounded w-[190px] md:w-[280px]" 
               rows="4" 
               placeholder="Enter your message here..."
               required
@@ -124,10 +123,10 @@ function App() {
           </div>     
 
           <div id="image" className="z-0 p-0 ">
-            {isDarkMode ? (<div className="w-[1092px]">
+            {isDarkMode ? (<div className="w-[312px] md:w-[1032px]">
                   <img src={cdark} className="img " />
                   <img src={cdark} className="img mt-20 rotate-180 float-right" /></div>
-                ) : (<div className="w-[1092px]">
+                ) : (<div className="w-[312px] md:w-[1032px]">
                   <img src={clight} className="img " />
                   <img src={clight} className="img mt-20 rotate-180 float-right" /></div>
                 )}

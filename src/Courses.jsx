@@ -34,7 +34,7 @@ function Courses() {
         {coursesData.map((course, index) => (
           <li key={index}>
             <img src={course.icon} className="icon" alt="" />
-            <p className='text-[17px]'>{course.text}</p>
+            <p>{course.text}</p>
           </li>
         ))}
       </ul>

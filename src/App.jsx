@@ -91,8 +91,7 @@ function App() {
           
           {/* ✅ Fix 2: Move <form> outside of <p> */}
           <div id="contact" className="text-[15px] float-left w-full">
-              <a href="https://mail.google.com/mail/u/0/?hl=nl#inbox" target="_blank">email: marmorakh2000@gmail.com</a>
-              <br />
+              <a href="mailto:marmorakh2000@gmail.com">Send Email</a><br />
               <span>phone: +963994222167</span><br />
               <span>working remotely</span>
            

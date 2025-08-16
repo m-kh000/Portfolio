@@ -8,12 +8,14 @@
   body {
     margin: 0;
     min-height: 100vh;
+    max-width: 100vw;
     color: #EEDDB2;
     @apply bg-[#f6f6e9] md:bg-[#f3F3CD];
   }
 
   .card {
-    min-width: 250px;
+    min-width: 150px;
+    @apply md:min-w-[250px];
     flex: 0 0 auto;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -30,7 +32,7 @@
     transform: scale(1.1) translateZ(0);
   }
   #mira {
-    @apply text-[118px] text-[#6d4b76]; /* 8.4vw → 8.4×14 ≈ 118px */
+    @apply  text-[90px] md:text-[118px] text-[#6d4b76]; /* 8.4vw → 8.4×14 ≈ 118px */
   }
 
   html {
@@ -39,15 +41,15 @@
   }
 
   div {
-    @apply py-[14px] px-[6px] text-vio font-bold z-10; /* 1vw→14px, 0.45vw→6px, 1.4vw→20px */
+    @apply px-[2px] py-[14px] md:px-[6px] text-vio font-bold z-10; /* 1vw→14px, 0.45vw→6px, 1.4vw→20px */
   }
 
   h1 {
-    @apply text-vio font-bold text-[35px]; /* 2.5vw → 35px */
+    @apply text-vio font-bold  text-[20px] md:text-[35px]; /* 2.5vw → 35px */
   }
 
   p {
-    @apply  text-vio font-bold text-[20px] text-shadow-xs; /* 0.6vw→8px, 1.4vw→20px */
+    @apply  text-vio font-bold text-[12px] md:text-[20px] text-shadow-xs; /* 0.6vw→8px, 1.4vw→20px */
   }
 
   li {
@@ -57,14 +59,14 @@
   button {
     transform: translateZ(0);
     will-change: transform;
-    @apply round cursor-pointer bg-[#8c79322e] p-[7px] text-[20] text-center hover:scale-105 hover:translate-z-0 transition-all; /* 0.5vw → 7px */
+    @apply round cursor-pointer bg-[#8c79322e] p-[7px] text-[12px] md:text-[20px] text-center hover:scale-105 hover:translate-z-0 transition-all; /* 0.5vw → 7px */
   }
 
   a:hover{
     opacity:0.70;
   }
   #toolbar {
-    @apply bg-[#fffff0] flex-col w-[60vw] md:w-[280px] m-0 px-[1px] pt-[70px] h-full round text-center;
+    @apply bg-[#fffff0] flex-col w-[100px] md:w-[280px] m-0 px-[1px] pt-[70px] h-full round text-center;
   }
 
   #contact {

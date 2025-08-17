@@ -2,7 +2,7 @@
 
 @theme {
   --color-vio: #7c5f83;
-  --color-vio-dark-mode: #b29bb2;
+  --color-vio-dark-mode: #c4b0c4;
   --color-vio-darker-dark-mode: #e5d0f2;
   --color-mob-voi:#706485 ;
 }
@@ -83,22 +83,22 @@
 
 
 body.darkmode {
-  @apply bg-[#28292f] md:bg-[#1B1C20] ;
+  @apply bg-[#161b24] md:bg-[#1B1C20] ;
   color:#1B1C20;
 
   p, div {
-    @apply text-[#c2c3e7] md:text-vio-dark-mode;
+    @apply text-[#9298b5] md:text-vio-dark-mode;
   }
   h1, h2{
-    @apply text-[#c2c3e7] md:text-vio-darker-dark-mode;
+    @apply text-[#9298b5] md:text-vio-darker-dark-mode;
   }
 
   #mira {
-    @apply text-[#b0ace9] md:text-[#CE97DD];
+    @apply text-[#707799] md:text-[#CE97DD];
   }
 
   #toolbar ,#menu{
-    @apply bg-[#3b3c43] md:bg-[#2B2E34];
+    @apply bg-[#29303b] md:bg-[#2B2E34];
   }
 
   button {
@@ -123,7 +123,7 @@ body.darkmode {
 }
 
 @utility img {
-  @apply hue-rotate-45 saturate-0 md:saturate-70 opacity-80 md:hue-rotate-20 w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start; /* 56vw → 784px → 780px, 42vw → 588px → 590px */
+  @apply saturate-0 md:saturate-70 md:hue-rotate-20 w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start; /* 56vw → 784px → 780px, 42vw → 588px → 590px */
 }
 
 .scrollable-cards-section {

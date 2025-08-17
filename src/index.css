@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-vio: #7c5f83;
-  --color-vio-dark-mode: #9d96ac;
-  --color-vio-darker-dark-mode: #aaa1bb;
+  --color-vio: #7c5fa3;
+  --color-vio-dark-mode: #9d96dc;
+  --color-vio-darker-dark-mode: #aaa1eb;
   --color-mob-voi:#7d6587 ;
 }
 
@@ -11,7 +11,7 @@
   body {
     margin: 0;
     color: #f0ebd1;
-    @apply bg-[#ecede3] md:bg-[#f0edd1] ;
+    @apply bg-[#ecebea] md:bg-[#f0edd1] ;
     overflow-x: hidden;
   }
 
@@ -123,7 +123,7 @@ body.darkmode {
 }
 
 @utility img {
-  @apply hue-rotate-45 saturate-80 md:hue-rotate-20 w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start; /* 56vw → 784px → 780px, 42vw → 588px → 590px */
+  @apply hue-rotate-45 saturate-0 md:saturate-70 opacity-80 md:hue-rotate-20 w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start; /* 56vw → 784px → 780px, 42vw → 588px → 590px */
 }
 
 .scrollable-cards-section {

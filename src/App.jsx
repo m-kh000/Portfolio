@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ScrollableCards from "./ScrollableCards";
 import Courses from "./Courses";
+import Paragraphs from "./Paragraphs";
 import moon from '/icons/moon.png';
 import sun from '/icons/sun.png';
 import clight from '/icons/circlelight.png';
@@ -90,7 +91,7 @@ function App() {
 
 
         <div id="rightside" className="p-0 ">
-          <div className="z-20 absolute mt-[15px] mx-0  place-items-center">
+          <div className="z-20 absolute mt-[15px] mx-0 p-5 md:p-0 place-items-center">
 
             <p id="mira">{`hi${comma ? `, ${name}` : ''}`}<li/> it's Mira Khnefes</p>
             <p >- A passionate ITE student always ready to work, create, and comunicate.</p>
@@ -108,8 +109,9 @@ function App() {
             </a></div>
             
           <ScrollableCards/>
-          
-          {/* ✅ Fix 2: Move <form> outside of <p> */}
+          <Paragraphs />
+
+          <div className="w-full place-items-center"> 
           <div id="contact" >
               <a href="mailto:marmorakh2000@gmail.com" target="_blank" rel = "noopener noreferrer">Send Email</a><br />
               <span>phone: +963994222167</span><br />
@@ -137,17 +139,18 @@ function App() {
             </button>
           </form>
           </div>
-          <div className=" p-0 "><p><a href="https://chat.qwen.ai/c/29d202f2-57b2-4b27-a2be-b1f8fb4f116f  " target="_blank">@ Need Help</a></p>
+          <div className="mt-10 md:mt-40 mb-10"><p><a href="https://chat.qwen.ai/c/29d202f2-57b2-4b27-a2be-b1f8fb4f116f  " target="_blank">@ Need Help</a></p>
           </div>
             
+          </div> 
           </div>     
 
           <div id="image" className="z-0 p-0 ">
             {isDarkMode ? (<div className="w-[97vw] md:w-[1032px]">
-                  <img src={cdark} className="img " />
-                  <img src={cdark} className="img mt-20 rotate-180 float-right" /></div>
+                  <img src={cdark} className="img  brightness-130 md:brightness-110" />
+                  <img src={cdark} className="img mt-20 rotate-180 float-right brightness-130 md:brightness-110" /></div>
                 ) : (<div className="w-[97vw]  md:w-[1032px]">
-                  <img src={clight} className="img " />
+                  <img src={clight} className="img" />
                   <img src={clight} className="img mt-20 rotate-180 float-right" /></div>
                 )}
           </div>

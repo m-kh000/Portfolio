@@ -1,21 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-vio: #5A3F61;
-  --color-mob-voi: #816987;
+  --color-vio: #7c5f83;
+  --color-vio-dark-mode: #a796ac;
+  --color-vio-darker-dark-mode: #e9d4f6;
+  --color-mob-voi:#7d6587 ;
 }
 
 @layer base {
   body {
     margin: 0;
-    color: #EEDDB2;
-    @apply bg-[#f6f3e9] md:bg-[#f3F3CD] ;
+    color: #f0ebd1;
+    @apply bg-[#f6f5e9] md:bg-[#f0edd1] ;
     overflow-x: hidden;
   }
 
   .card {
-    max-width: 120px;
-    @apply md:min-w-[250px];
+    @apply w-[140px] md:w-[250px] min-h-[80px] md:min-h-[100px] round ;
     flex: 0 0 auto;
     padding: 0.2rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -26,7 +27,6 @@
     transform: translateZ(0);
   /* Optional: hint to browser that it will be transformed */
     will-change: transform;
-    @apply round;
   }
   .card:hover{
     transform: scale(1.1) translateZ(0);
@@ -45,7 +45,7 @@
   }
 
   h1 {
-    @apply text-mob-voi md:text-vio font-bold  text-[15px] md:text-[35px]; /* 2.5vw → 35px */
+    @apply text-mob-voi md:text-vio font-bold  text-[20px] md:text-[35px]; /* 2.5vw → 35px */
   }
 
   p {
@@ -59,7 +59,7 @@
   button {
     transform: translateZ(0);
     will-change: transform;
-    @apply round cursor-pointer bg-[#cfc39e78] md:bg-[#8c79322e] p-[4px] md:p-[7px] text-[14px] md:text-[20px] text-center hover:scale-105 hover:translate-z-0 transition-all; /* 0.5vw → 7px */
+    @apply round cursor-pointer bg-[#a49f9051] md:bg-[#8c79322e] p-[4px] md:p-[7px] text-[14px] md:text-[20px] text-center hover:scale-105 hover:translate-z-0 transition-all; /* 0.5vw → 7px */
   }
 
   a:hover{
@@ -72,11 +72,11 @@
 
   #toolbar { 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    @apply  px-[1px] pt-[70px] md:px-4 bg-[#fffff0] flex-col w-[170px] md:w-[280px] m-0 h-full round text-center;
+    @apply  px-[1px] pt-[30px] md:px-4 md:pt-[70px] bg-[#fffff0] flex-col w-[170px] md:w-[280px] m-0 h-full round text-center;
   }
 
   #contact {
-    @apply  float-left w-full text-[10px] md:text-[15px] opacity-65; /* 0.6vw → 8px */
+    @apply mt-20 float-left w-full text-[10px] md:text-[15px] opacity-75; /* 0.6vw → 8px */
   }
 }
 
@@ -84,10 +84,13 @@
 
 body.darkmode {
   @apply bg-[#2c2d31] md:bg-[#1B1C20] ;
-  color: inherit;
+  color:#1B1C20;
 
-  p, h1, h2, div {
-    @apply text-[#ead2f0] md:text-[#E4B9F0];
+  p, div {
+    @apply text-[#ead2f0] md:text-vio-dark-mode;
+  }
+  h1, h2{
+    @apply text-[#ead2f0] md:text-vio-darker-dark-mode;
   }
 
   #mira {
@@ -116,11 +119,11 @@ body.darkmode {
 }
 
 @utility icon {
-  @apply  w-[13px] h-[13px] md:w-[23px] md:h-[23px] m-1 place-self-start; /* 1.7vw → 24px */
+  @apply  w-[14px] h-[14px] md:w-[23px] md:h-[23px] m-1 place-self-start; /* 1.7vw → 24px */
 }
 
 @utility img {
-  @apply brightness-170 md:brightness-100 w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start; /* 56vw → 784px → 780px, 42vw → 588px → 590px */
+  @apply brightness-110 md:brightness-100 hue-rotate-45 md:hue-rotate-20 w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start; /* 56vw → 784px → 780px, 42vw → 588px → 590px */
 }
 
 .scrollable-cards-section {
@@ -129,7 +132,7 @@ body.darkmode {
 }
 
 .cards-container {
-  width: 91vw; /* Or use max-width for responsiveness */
+  @apply w-[81vw] md:w-[91vw]; /* Or use max-width for responsiveness */
   display: flex;
   overflow-x: auto;
   gap: 0.1px;
@@ -149,14 +152,14 @@ body.darkmode {
 .card h2 {
   font-size: 0.9rem;
   margin: 0.5rem 0;
-  @apply md:text-[1.2rem];
+  @apply text-[1rem] md:text-[1.2rem];
 }
 
 .card p {
-  font-size: 0.5rem;
-  color: #555;
-  @apply md:text-[0.9rem];
+  text-align: center;
+  @apply text-[0.6rem] md:text-[0.9rem] text-[#454145];
 }
+
 
 .courses p{
   apply text-[9px] md:text-[17px];

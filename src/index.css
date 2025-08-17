@@ -2,13 +2,14 @@
 
 @theme {
   --color-vio: #5A3F61;
+  --color-mob-voi: #816987;
 }
 
 @layer base {
   body {
     margin: 0;
     color: #EEDDB2;
-    @apply bg-[#f6f6e9] md:bg-[#f3F3CD] ;
+    @apply bg-[#f6f3e9] md:bg-[#f3F3CD] ;
     overflow-x: hidden;
   }
 
@@ -31,7 +32,7 @@
     transform: scale(1.1) translateZ(0);
   }
   #mira {
-    @apply md:-translate-x-[10vw] mx-0 text-[50px] md:text-[118px] text-[#6d4b76] ; /* 8.4vw → 8.4×14 ≈ 118px */
+    @apply md:-translate-x-[10vw] mx-0 text-[50px] md:text-[118px] text-mob-voi md:text-[#6d4b76] ; /* 8.4vw → 8.4×14 ≈ 118px */
   }
 
   html {
@@ -40,15 +41,15 @@
   }
 
   div {
-    @apply px-[2px] py-[0px] md:px-[0px] text-vio font-bold ; /* 1vw→14px, 0.45vw→6px, 1.4vw→20px */
+    @apply px-[2px] py-[0px] md:px-[0px] text-mob-voi md:text-vio font-bold ; /* 1vw→14px, 0.45vw→6px, 1.4vw→20px */
   }
 
   h1 {
-    @apply text-vio font-bold  text-[15px] md:text-[35px]; /* 2.5vw → 35px */
+    @apply text-mob-voi md:text-vio font-bold  text-[15px] md:text-[35px]; /* 2.5vw → 35px */
   }
 
   p {
-    @apply max-w-fit text-vio font-bold text-[13px] md:text-[20px] text-shadow-xs; /* 0.6vw→8px, 1.4vw→20px */
+    @apply max-w-fit text-mob-voi md:text-vio font-bold text-[13px] md:text-[20px] text-shadow-xs; /* 0.6vw→8px, 1.4vw→20px */
   }
 
   li {
@@ -58,7 +59,7 @@
   button {
     transform: translateZ(0);
     will-change: transform;
-    @apply round cursor-pointer bg-[#8c79322e] p-[4px] md:p-[7px] text-[14px] md:text-[20px] text-center hover:scale-105 hover:translate-z-0 transition-all; /* 0.5vw → 7px */
+    @apply round cursor-pointer bg-[#cfc39e78] md:bg-[#8c79322e] p-[4px] md:p-[7px] text-[14px] md:text-[20px] text-center hover:scale-105 hover:translate-z-0 transition-all; /* 0.5vw → 7px */
   }
 
   a:hover{
@@ -82,15 +83,15 @@
 
 
 body.darkmode {
-  background: #1B1C20;
+  @apply bg-[#2c2d31] md:bg-[#1B1C20] ;
   color: inherit;
 
   p, h1, h2, div {
-    color: #E4B9F0;
+    @apply text-[#ead2f0] md:text-[#E4B9F0];
   }
 
   #mira {
-    color: #CE97DD;
+    @apply text-[#e4c2ed] md:text-[#CE97DD];
   }
 
   #toolbar {

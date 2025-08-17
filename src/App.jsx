@@ -146,10 +146,10 @@ function App() {
           </div>     
 
           <div id="image" className="z-0 p-0 ">
-            {isDarkMode ? (<div className="w-[97vw] md:w-[1032px]">
-                  <img src={cdark} className="img  brightness-130 md:brightness-110" />
-                  <img src={cdark} className="img mt-20 rotate-180 float-right brightness-130 md:brightness-110" /></div>
-                ) : (<div className="w-[97vw]  md:w-[1032px]">
+            {isDarkMode ? (<div className="w-[97vw] md:w-[1032px] brightness-300 opacity-15 md:brightness-110 md:opacity-100">
+                  <img src={cdark} className="img " />
+                  <img src={cdark} className="img mt-20 rotate-180 float-right" /></div>
+                ) : (<div className="w-[97vw]  md:w-[1032px] opacity-80 md:opacity-80">
                   <img src={clight} className="img" />
                   <img src={clight} className="img mt-20 rotate-180 float-right" /></div>
                 )}

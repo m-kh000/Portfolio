@@ -18,12 +18,16 @@ function ContactForm() {
     setMessage('');
   };
 }
-
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(() => {
     return localStorage.getItem("darkMode") === "true";
   });
 
+  function toggletoolbar(){
+    setSidebarOpen((prev) => !prev);
+  }
+  
   function MyComponent() {
     const [name, setName] = useState("");
     const [comma, setComma] = useState(false);
@@ -44,34 +48,50 @@ function App() {
 
     return (
       <div className="flex">
-        <div id="toolbar">
-          <button
-            id="mode"
-            className=" round mb-7"
-            aria-label={isDarkMode ? "lightmode" : "darkmode"}
-            onClick={toggleMode}
-          >
-            {isDarkMode ? (
-              <img src = {moon} alt="Moon" className="icon" />
-            ) : (
-              <img src={sun} alt="Sun" className="icon" />
-            )}
-          
-          </button>
+        {/* Responsive Toolbar: Hidden on small screens, shown on md+ */}
+<div id="toolbar" className={`
+  fixed z-30 top-3 shadow-black 
+  transform transition-transform duration-700 ease-in-out 
+  ${sidebarOpen ? 'translate-x-0' /*'left-1'*/ : '-translate-x-42'}
+  md:translate-x-0 md:relative md:shadow-none md:rounded-none
+`}
+>
+    <button
+      id="mode"
+      className="round mb-7"
+      aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+      onClick={toggleMode}
+    >
+      {isDarkMode ? (
+        <img src={moon} alt="Moon" className="icon" />
+      ) : (
+        <img src={sun} alt="Sun" className="icon" />
+      )}
+    </button>
 
-          <h1>
-            a bit <br />
-            about myself
-          </h1>
+    <h1 className="font-bold">
+      a bit <br /> about myself
+    </h1>
 
-          <br />
-          <div className="text-left items-start gap-[7px] ">
-            <Courses/>
-          </div>
-        </div>
-        <div id="rightside" className="p-0 max-w-[310px]">
-          <div className="z-20 absolute m-[15px] place-items-center-safe ">
-            {/* ✅ Fix 1: Remove <li/> inside <p> */}
+    <br />
+    <div className="text-left items-start gap-[7px]">
+      <Courses />
+    </div>
+</div>
+
+{/* Button to open sidebar on small screens */}
+<button
+  id="menu"
+  onClick={toggletoolbar}
+  className={`px-2 text-right w-[40px] text-[12px] md:hidden fixed top-[12px] z-30 ${sidebarOpen ? 'left-38' : '-translate-x-5'  }`}
+>
+  ☰ 
+</button>
+
+
+        <div id="rightside" className="p-0 ">
+          <div className="z-20 absolute mt-[15px] mx-0  place-items-center">
+
             <p id="mira">{`hi${comma ? `, ${name}` : ''}`}<li/> it's Mira Khnefes</p>
             <p >- A passionate ITE student always ready to work, create, and comunicate.</p>
             <p className="my-28">
@@ -104,14 +124,14 @@ function App() {
             <textarea 
               id="message" 
               name="message"
-              className="block mt-[2px] p-[4px] border border-gray-600 rounded w-[190px] md:w-[280px]" 
+              className="block mt-[2px] p-[4px] border border-gray-600 rounded w-[210px] md:w-[280px]" 
               rows="4" 
               placeholder="Enter your message here..."
               required
             />
             <button 
               type="submit" 
-              className="mt-[4px] round"
+              className="mt-[7px] round"
             >
               Submit
             </button>
@@ -123,10 +143,10 @@ function App() {
           </div>     
 
           <div id="image" className="z-0 p-0 ">
-            {isDarkMode ? (<div className="w-[312px] md:w-[1032px]">
+            {isDarkMode ? (<div className="w-[97vw] md:w-[1032px]">
                   <img src={cdark} className="img " />
                   <img src={cdark} className="img mt-20 rotate-180 float-right" /></div>
-                ) : (<div className="w-[312px] md:w-[1032px]">
+                ) : (<div className="w-[97vw]  md:w-[1032px]">
                   <img src={clight} className="img " />
                   <img src={clight} className="img mt-20 rotate-180 float-right" /></div>
                 )}

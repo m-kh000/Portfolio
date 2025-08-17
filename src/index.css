@@ -2,20 +2,22 @@
 
 @theme {
   --color-vio: #5A3F61;
+  --color-mob-voi: #816987;
 }
 
 @layer base {
   body {
     margin: 0;
     color: #EEDDB2;
-    @apply bg-[#f6f6e9] md:bg-[#f3F3CD];
+    @apply bg-[#f6f3e9] md:bg-[#f3F3CD] ;
+    overflow-x: hidden;
   }
 
   .card {
     max-width: 120px;
     @apply md:min-w-[250px];
     flex: 0 0 auto;
-    padding: 1rem;
+    padding: 0.2rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background-color: #fffff0;
     text-align: center;
@@ -30,7 +32,7 @@
     transform: scale(1.1) translateZ(0);
   }
   #mira {
-    @apply  text-[50px] md:text-[118px] text-[#6d4b76]; /* 8.4vw → 8.4×14 ≈ 118px */
+    @apply md:-translate-x-[10vw] mx-0 text-[50px] md:text-[118px] text-mob-voi md:text-[#6d4b76] ; /* 8.4vw → 8.4×14 ≈ 118px */
   }
 
   html {
@@ -39,15 +41,15 @@
   }
 
   div {
-    @apply px-[2px] py-[14px] md:px-[6px] text-vio font-bold z-10; /* 1vw→14px, 0.45vw→6px, 1.4vw→20px */
+    @apply px-[2px] py-[0px] md:px-[0px] text-mob-voi md:text-vio font-bold ; /* 1vw→14px, 0.45vw→6px, 1.4vw→20px */
   }
 
   h1 {
-    @apply text-vio font-bold  text-[15px] md:text-[35px]; /* 2.5vw → 35px */
+    @apply text-mob-voi md:text-vio font-bold  text-[15px] md:text-[35px]; /* 2.5vw → 35px */
   }
 
   p {
-    @apply  text-vio font-bold text-[9px] md:text-[20px] text-shadow-xs; /* 0.6vw→8px, 1.4vw→20px */
+    @apply max-w-fit text-mob-voi md:text-vio font-bold text-[13px] md:text-[20px] text-shadow-xs; /* 0.6vw→8px, 1.4vw→20px */
   }
 
   li {
@@ -57,14 +59,20 @@
   button {
     transform: translateZ(0);
     will-change: transform;
-    @apply round cursor-pointer bg-[#8c79322e] p-[3px] md:p-[7px] text-[12px] md:text-[20px] text-center hover:scale-105 hover:translate-z-0 transition-all; /* 0.5vw → 7px */
+    @apply round cursor-pointer bg-[#cfc39e78] md:bg-[#8c79322e] p-[4px] md:p-[7px] text-[14px] md:text-[20px] text-center hover:scale-105 hover:translate-z-0 transition-all; /* 0.5vw → 7px */
   }
 
   a:hover{
     opacity:0.70;
   }
-  #toolbar {
-    @apply bg-[#fffff0] flex-col w-[100px] md:w-[280px] m-0 px-[1px] pt-[70px] h-full round text-center;
+
+  #menu{
+    @apply bg-[#fffff0];
+  }
+
+  #toolbar { 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    @apply  px-[1px] pt-[70px] md:px-4 bg-[#fffff0] flex-col w-[170px] md:w-[280px] m-0 h-full round text-center;
   }
 
   #contact {
@@ -75,28 +83,29 @@
 
 
 body.darkmode {
-  background: #1B1C20;
+  @apply bg-[#2c2d31] md:bg-[#1B1C20] ;
   color: inherit;
 
   p, h1, h2, div {
-    color: #E4B9F0;
+    @apply text-[#ead2f0] md:text-[#E4B9F0];
   }
 
   #mira {
-    color: #CE97DD;
+    @apply text-[#e4c2ed] md:text-[#CE97DD];
   }
 
-  #toolbar {
-    background: #2B2E34;
+  #toolbar ,#menu{
+    @apply bg-[#3e4046] md:bg-[#2B2E34];
   }
 
   button {
-    @apply bg-[#09090a4a];
+    @apply bg-[#0e0e114a] md:bg-[#09090a4a];
   }
 
   .card {
-    @apply bg-[#2B2E34] text-white;
+    @apply bg-[#383c42] md:bg-[#2B2E34] text-white;
   }
+
 }
 
 
@@ -107,11 +116,11 @@ body.darkmode {
 }
 
 @utility icon {
-  @apply  w-[12px] h-[12px] md:w-[23px] md:h-[23px] m-1 place-self-start; /* 1.7vw → 24px */
+  @apply  w-[13px] h-[13px] md:w-[23px] md:h-[23px] m-1 place-self-start; /* 1.7vw → 24px */
 }
 
 @utility img {
-  @apply w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start; /* 56vw → 784px → 780px, 42vw → 588px → 590px */
+  @apply brightness-170 md:brightness-100 w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start; /* 56vw → 784px → 780px, 42vw → 588px → 590px */
 }
 
 .scrollable-cards-section {
@@ -120,10 +129,10 @@ body.darkmode {
 }
 
 .cards-container {
-  width: 70vw; /* Or use max-width for responsiveness */
+  width: 91vw; /* Or use max-width for responsiveness */
   display: flex;
   overflow-x: auto;
-  gap: 0.1rem;
+  gap: 0.1px;
   padding: 1rem 0;
   @apply md:gap-[1rem];
   scroll-behavior: smooth;
@@ -150,5 +159,5 @@ body.darkmode {
 }
 
 .courses p{
-  apply text-[8px] md:text-[17px];
+  apply text-[9px] md:text-[17px];
 }

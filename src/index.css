@@ -94,21 +94,18 @@ body.darkmode {
     @apply text-[#e4c2ed] md:text-[#CE97DD];
   }
 
-  #toolbar {
-    background: #2B2E34;
+  #toolbar ,#menu{
+    @apply bg-[#3e4046] md:bg-[#2B2E34];
   }
 
   button {
-    @apply bg-[#09090a4a];
+    @apply bg-[#0e0e114a] md:bg-[#09090a4a];
   }
 
   .card {
-    @apply bg-[#2B2E34] text-white;
+    @apply bg-[#383c42] md:bg-[#2B2E34] text-white;
   }
 
-  #menu{
-    @apply bg-[#2B2E34];
-  }
 }
 
 
@@ -123,7 +120,7 @@ body.darkmode {
 }
 
 @utility img {
-  @apply w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start; /* 56vw → 784px → 780px, 42vw → 588px → 590px */
+  @apply brightness-170 md:brightness-100 w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start; /* 56vw → 784px → 780px, 42vw → 588px → 590px */
 }
 
 .scrollable-cards-section {

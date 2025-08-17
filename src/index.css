@@ -83,11 +83,11 @@
 
 
 body.darkmode {
-  @apply bg-[#161b24] md:bg-[#1B1C20] ;
+  @apply bg-[#2d3340] md:bg-[#1B1C20] ;
   color:#1B1C20;
 
   p, div {
-    @apply text-[#9298b5] md:text-vio-dark-mode;
+    @apply text-[#b7beed] md:text-vio-dark-mode;
   }
   h1, h2{
     @apply text-[#9298b5] md:text-vio-darker-dark-mode;
@@ -98,7 +98,7 @@ body.darkmode {
   }
 
   #toolbar ,#menu{
-    @apply bg-[#29303b] md:bg-[#2B2E34];
+    @apply bg-[#3a414f] md:bg-[#2B2E34];
   }
 
   button {
@@ -106,7 +106,7 @@ body.darkmode {
   }
 
   .card {
-    @apply bg-[#383c42] md:bg-[#2B2E34] text-white;
+    @apply bg-[#3a414f] md:bg-[#2B2E34] ;
   }
 
 }

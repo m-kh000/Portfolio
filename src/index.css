@@ -4,7 +4,7 @@
   --color-vio: #7c5f83;
   --color-vio-dark-mode: #b29bb2;
   --color-vio-darker-dark-mode: #e5d0f2;
-  --color-mob-voi:#7d65a7 ;
+  --color-mob-voi:#706485 ;
 }
 
 @layer base {
@@ -72,7 +72,7 @@
 
   #toolbar { 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    @apply  px-[1px] pt-[30px] md:px-4 md:pt-[70px] bg-[#edeae1] flex-col w-[170px] md:w-[280px] m-0 h-full round text-center;
+    @apply  px-[1px] pt-[30px] md:px-4 md:pt-[70px] bg-[#fffff0] flex-col w-[170px] md:w-[280px] m-0 h-full round text-center;
   }
 
   #contact {
@@ -87,14 +87,14 @@ body.darkmode {
   color:#1B1C20;
 
   p, div {
-    @apply text-[#ead2f0] md:text-vio-dark-mode;
+    @apply text-[#d8d2f0] md:text-vio-dark-mode;
   }
   h1, h2{
-    @apply text-[#ead2f0] md:text-vio-darker-dark-mode;
+    @apply text-[#d8d2f0] md:text-vio-darker-dark-mode;
   }
 
   #mira {
-    @apply text-[#e4c2ed] md:text-[#CE97DD];
+    @apply text-[#d0c2ed] md:text-[#CE97DD];
   }
 
   #toolbar ,#menu{

@@ -83,18 +83,18 @@
 
 
 body.darkmode {
-  @apply bg-[#2d3340] md:bg-[#1B1C20] ;
+  @apply bg-[#272c36] md:bg-[#1B1C20] ;
   color:#1B1C20;
 
   p, div {
-    @apply text-[#b7beed] md:text-vio-dark-mode;
+    @apply text-[#b3bae6] md:text-vio-dark-mode;
   }
   h1, h2{
-    @apply text-[#9298b5] md:text-vio-darker-dark-mode;
+    @apply text-[#b3bae6] md:text-vio-darker-dark-mode;
   }
 
   #mira {
-    @apply text-[#707799] md:text-[#CE97DD];
+    @apply text-[#a9b2e8] md:text-[#CE97DD];
   }
 
   #toolbar ,#menu{
@@ -102,7 +102,7 @@ body.darkmode {
   }
 
   button {
-    @apply bg-[#0e0e114a] md:bg-[#09090a4a];
+    @apply bg-[#0e0e1141] md:bg-[#09090a4a];
   }
 
   .card {

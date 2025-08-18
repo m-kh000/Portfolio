@@ -127,7 +127,9 @@ function App() {
                   alert("Copy failed. Please try again.");
                 });
                 }}>
-              phone: +963994222167</span><br />
+                  <a href="tel:+963994222167">
+                    Phone: +963994222167
+                    </a><br /></span><br />
               <span>working remotely</span>
            
           {/* Form moved outside the <p> */}

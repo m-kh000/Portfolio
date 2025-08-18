@@ -1,12 +1,13 @@
 import React from 'react';
+import Paragraph from './Paragraph'; // Adjust the path if needed
 
-function Paragraphs() {
+function CardsParagraphs() {
   const sections = [
     {
       id: 'projects',
       title: 'Projects',
       content: (
-        <p className=' text-[11px] md:text-[17px] '>
+        <p className='text-[11px] md:text-[17px]'>
           In college I have learned C++, Java, and JSX as I was making projects all from scratch, which maked me master syntax and language basics.
         </p>
       ),
@@ -14,13 +15,13 @@ function Paragraphs() {
     {
       id: 'achievements',
       title: 'Achievements',
-      content: <p className=' text-[11px] md:text-[17px] '>Coming soon. Stay tuned!</p>,
+      content: <p className='text-[11px] md:text-[17px]'>Coming soon. Stay tuned!</p>,
     },
     {
       id: 'studies',
       title: 'Studies',
       content: (
-        <p className=' text-[11px] md:text-[17px] '>
+        <p className='text-[11px] md:text-[17px]'>
           I am currently studying ITE (Information and Technology Engineering) at Damascus University, and I'm backing it up with online courses to wrap things together and to expand my knowledge base.
         </p>
       ),
@@ -29,7 +30,7 @@ function Paragraphs() {
       id: 'certificates',
       title: 'Certificates',
       content: (
-        <p className=' text-[11px] md:text-[17px] '>
+        <p className='text-[11px] md:text-[17px]'>
           My verified certificates can be found at the following links:
           <br /><br />
           <a
@@ -61,13 +62,13 @@ function Paragraphs() {
     {
       id: 'work-experience',
       title: 'Work Experience',
-      content: <p className=' text-[11px] md:text-[17px] '>Coming soon. Stay tuned!</p>,
+      content: <p className='text-[11px] md:text-[17px]'>Coming soon. Stay tuned!</p>,
     },
     {
       id: 'hobbies',
       title: 'Hobbies',
       content: (
-        <p className=' text-[11px] md:text-[17px] '>
+        <p className='text-[11px] md:text-[17px]'>
           Over the years I have developed gifts that later turned into hobbies, including oil painting, problem solving, code competing, and many others.
         </p>
       ),
@@ -77,14 +78,10 @@ function Paragraphs() {
   return (
     <div className='mt-20 md:mt-40'>
       {sections.map((section) => (
-        <div className=' md:pr-50' key={section.id}>
-          <h1 className='text-[15px] md:text-[22px]' id={section.id}>{section.title}</h1>
-          <div>{section.content}</div>
-          <hr className='my-10'/>
-        </div>
+        <Paragraph key={section.id} props={section} />
       ))}
     </div>
   );
 }
 
-export default Paragraphs;
+export default CardsParagraphs;

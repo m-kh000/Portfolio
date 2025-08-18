@@ -129,7 +129,7 @@ function App() {
                 }}>
                   <a href="tel:+963994222167">
                     Phone: +963994222167
-                    </a><br /></span><br />
+                    </a><br /></span>
               <span>working remotely</span>
            
           {/* Form moved outside the <p> */}

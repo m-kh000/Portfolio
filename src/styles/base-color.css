@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+html {
+font-family: "Playfair Display", serif;
+scroll-behavior: smooth;
+user-select: none;
+  }
+@theme {
+  --color-vio: #7c5f83;
+  --color-vio-dark-mode: #c4b0c4;
+  --color-vio-darker-dark-mode: #e5d0f2;
+  --color-mob-voi: #706485;
+
+}
+
+@layer base {
+  body {
+    color: #f0ebd1;
+    @apply bg-[#ededea] md:bg-[#f0edd1] ;
+  }
+
+  #mira {
+    @apply text-mob-voi md:text-[#6d4b76] ;
+  }
+
+  div {
+    @apply text-mob-voi md:text-vio ;
+  }
+
+  h1 {
+    @apply text-mob-voi md:text-vio ;
+  }
+
+  p {
+    @apply text-mob-voi md:text-vio ;
+  }
+
+  #toolbar, #menu, .card{ 
+    @apply bg-[#fffff0];
+  }
+
+  #contact {
+    @apply opacity-80;
+  }
+}
+
+body.darkmode {
+  @apply bg-[#272c36] md:bg-[#1B1C20] ;
+  color:#1B1C20;
+
+  p, div {
+    @apply text-[#b3bae6] md:text-vio-dark-mode;
+  }
+  h1, h2{
+    @apply text-[#b3bae6] md:text-vio-darker-dark-mode;
+  }
+
+  #mira {
+    @apply text-[#a9b2e8] md:text-[#CE97DD];
+  }
+
+  #toolbar ,#menu{
+    @apply bg-[#3a414f] md:bg-[#2B2E34];
+  }
+
+  button {
+    @apply bg-[#0e0e1141] md:bg-[#09090a4a];
+  }
+
+  .card {
+    @apply bg-[#3a414f] md:bg-[#2B2E34] ;
+  }
+}

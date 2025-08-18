@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@layer base {
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  div {
+    @apply px-[2px] py-[0px] md:px-[0px] font-bold ;
+  }
+
+  h1 {
+    @apply text-[20px] md:!text-[35px] ;
+  }
+
+  p {
+    @apply max-w-fit font-bold text-[13px] md:text-[20px] text-shadow-xs;
+  }
+
+  li {
+    @apply flex place-items-center-safe py-1.5;
+  }
+
+  #mira {
+    @apply md:-translate-x-[10vw] mx-0 text-[50px] md:text-[118px];
+  }
+
+  #toolbar { 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    @apply px-[1px] pt-[30px] md:px-4 md:pt-[70px] flex-col w-[170px] md:w-[280px] m-0 h-full rounded-2xl text-center;
+  }
+
+  #contact {
+    @apply mt-20 float-left w-full text-[10px] md:text-[15px] opacity-75;
+  }
+
+  
+}
+
+
+@utility icon {
+  @apply w-[14px] h-[14px] md:w-[23px] md:h-[23px] m-1 place-self-start;
+}
+
+@utility img {
+  @apply saturate-0 md:saturate-70 md:hue-rotate-20 w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start;
+}

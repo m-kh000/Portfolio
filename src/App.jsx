@@ -1,11 +1,16 @@
+import './styles/base-color.css';
+import './styles/base-sizes.css';
+import './styles/cards.css';
+import './styles/buttons.css';
 import React, { useEffect, useState } from "react";
 import ScrollableCards from "./ScrollableCards";
 import Courses from "./Courses";
-import Paragraphs from "./Paragraphs";
+import CardsParagraphs from "./CardsParagraphs";
 import moon from '/icons/moon.png';
 import sun from '/icons/sun.png';
 import clight from '/icons/circlelight.png';
 import cdark from '/icons/circledark.png';
+
 
 function ContactForm() {
   const [message, setMessage] = useState('');
@@ -109,12 +114,20 @@ function App() {
             </a></div>
             
           <ScrollableCards/>
-          <Paragraphs />
+          <CardsParagraphs />
 
           <div className="w-full place-items-center"> 
           <div id="contact" >
               <a href="mailto:marmorakh2000@gmail.com" target="_blank" rel = "noopener noreferrer">Send Email</a><br />
-              <span>phone: +963994222167</span><br />
+              <span onClick={()=>{
+                navigator.clipboard.writeText("+963994222167").then(() => {
+                  alert("Phone number copied to clipboard!");
+                }).catch(err => {
+                  console.error("Failed to copy: ", err);
+                  alert("Copy failed. Please try again.");
+                });
+                }}>
+              phone: +963994222167</span><br />
               <span>working remotely</span>
            
           {/* Form moved outside the <p> */}

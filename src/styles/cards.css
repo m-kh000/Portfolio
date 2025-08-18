@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer base {
+  .card {
+    @apply w-[140px] md:w-[250px] min-h-[80px] md:min-h-[100px] rounded-2xl ;
+    flex: 0 0 auto;
+    padding: 0.2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .card:hover {
+    transform: scale(1.1) translateZ(0);
+  }
+
+  .card h2 {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    @apply text-[1rem] md:text-[1.2rem];
+  }
+
+  .card p {
+    text-align: center;
+    @apply text-[0.6rem] md:text-[0.9rem] text-[#454145];
+  }
+
+  .card a:hover{
+    opacity:100;
+  }
+}
+
+.scrollable-cards-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.cards-container {
+  @apply w-[81vw] md:w-[91vw];
+  display: flex;
+  overflow-x: auto;
+  gap: 0.1px;
+  padding: 1rem 0;
+  @apply md:gap-[1rem];
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.courses p {
+  apply text-[9px] md:text-[17px];
+}

@@ -34,8 +34,11 @@ user-select: none;
   p {
     @apply text-mob-voi md:text-vio ;
   }
+  #toolbar{
+    @apply bg-gradient-to-b from-[#fffff0] to-[#ededea] md:to-[#] ;
+  }
 
-  #toolbar, #menu, .card{ 
+  #menu, .card{ 
     @apply bg-[#fffff0];
   }
 
@@ -59,15 +62,12 @@ body.darkmode {
     @apply text-[#a9b2e8] md:text-[#CE97DD];
   }
 
-  #toolbar ,#menu{
-    @apply bg-[#3a414f] md:bg-[#2B2E34];
+  #toolbar {
+    @apply bg-gradient-to-b from-[#3a414f] to-[#272c36] md:from-[#2B2E34] md:to-[#];
   }
 
-  button {
-    @apply bg-[#0e0e1141] md:bg-[#09090a4a];
-  }
-
-  .card {
+  #menu ,.card{
     @apply bg-[#3a414f] md:bg-[#2B2E34] ;
   }
+
 }

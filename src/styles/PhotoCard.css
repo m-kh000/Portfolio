@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --rg-color-scheme: dark;
+  --rg-color-background-page: #0f141a;
+  --rg-color-background-object: #1b232d;
+  --rg-color-text-primary: #fff;
+  --rg-color-border-highcontrast: #fff;
+  --rg-color-shadow-gradient: linear-gradient(123deg, #ad5cff, #0099ff, #00bd6b);
+}
+
+.photo-card-container {
+  display: flex ;
+  perspective: 1000px;
+  @apply flex-row w-full justify-between my-30 ;
+}
+
+.photo-card {
+    @apply w-[170px] h-[170px] md:w-[400px] md:h-[400px];
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--rg-color-background-object);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+  position: relative;
+  border: 1px solid transparent;
+
+  /* Initial glow (subtle) */
+  box-shadow: 0 0 8px rgba(173, 84, 255, 0.3), 
+              0 0 16px rgba(0, 153, 255, 0.2),
+              inset 0 0 20px rgba(0, 189, 107, 0.1);
+}
+
+.photo-card:hover {
+  transform: scale(1.03);
+  animation: pulseGlow 2s infinite alternate;
+  box-shadow: 
+    0 0 20px rgba(173, 84, 255, 0.5),
+    0 0 40px rgba(0, 153, 255, 0.4),
+    0 0 60px rgba(0, 189, 107, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.photo-card .photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.photo-card:hover .photo-img {
+  transform: scale(1.05);
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 
+      0 0 20px [rgba(173, 84, 255, 0.5)],
+      0 0 40px rgba(0, 153, 255, 0.4),
+      0 0 60px rgba(0, 189, 107, 0.3),
+      inset 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+  10% {
+    box-shadow: 
+      0 0 30px rgba(173, 84, 255, 0.7),
+      0 0 60px rgba(0, 153, 255, 0.6),
+      0 0 90px rgba(0, 189, 107, 0.5),
+      inset 0 0 40px rgba(255, 255, 255, 0.2);
+  }
+}

@@ -43,7 +43,7 @@
   display: flex;
   overflow-x: auto;
   gap: 0.1px;
-  padding: 1rem 0;
+  padding: 2rem 0;
   @apply md:gap-[1rem];
   scroll-behavior: smooth;
   scrollbar-width: thin;

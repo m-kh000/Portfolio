@@ -6,15 +6,15 @@
   }
 
   div {
-    @apply px-[2px] py-[0px] md:px-[0px] font-bold ;
+    @apply px-[2px] py-[0px] md:px-[0px] font-bold;
   }
 
   h1 {
-    @apply text-[20px] md:!text-[35px] ;
+    @apply text-[20px] md:!text-[24.5px]; /* 35px → 70% = 24.5px */
   }
 
   p {
-    @apply max-w-fit font-bold text-[13px] md:text-[20px] text-shadow-xs;
+    @apply max-w-fit font-bold text-[13px] md:text-[15.4px] text-shadow-xs; /* 22px → 15.4px */
   }
 
   li {
@@ -22,26 +22,29 @@
   }
 
   #mira {
-    @apply md:-translate-x-[10vw] mx-0 text-[50px] md:text-[118px];
+    @apply mx-10 md:mx-0 text-[50px] md:text-[84px] md:mr-30; /* 120px → 84px */
   }
 
   #toolbar { 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    @apply px-[1px] pt-[30px] md:px-4 md:pt-[70px] flex-col w-[170px] md:w-[280px] m-0 h-full rounded-2xl text-center;
+    @apply px-[1px] pt-[30px] md:px-4 md:pt-[70px] flex-col w-[170px] md:w-[210px] h-full !m-0 rounded-2xl text-center top-3 md:mr-10 z-30 shadow-black 
+   md:translate-x-0 md:relative md:shadow-none md:rounded-none
+   ;
   }
 
   #contact {
-    @apply mt-20 float-left w-full text-[10px] md:text-[15px] opacity-75;
+    @apply mt-20 float-left text-[10px] md:text-[11.9px] opacity-75; /* 17px → 11.9px */
   }
 
-  
+  .course p{
+    @apply text-[11px] md:text-[14px]; /* 20px → 14px */
+  }
 }
 
-
-@utility icon {
-  @apply w-[14px] h-[14px] md:w-[23px] md:h-[23px] m-1 place-self-start;
+.icon {
+  @apply w-[14px] h-[14px] md:w-[17.5px] md:h-[17.5px] m-1 place-self-start; /* 25px → 17.5px */
 }
 
-@utility img {
-  @apply saturate-0 md:saturate-70 md:hue-rotate-20 w-[312px] h-[236px] md:w-[780px] md:h-[590px] place-self-start;
+.img {
+  @apply saturate-0 md:saturate-70 md:hue-rotate-20 w-[312px] h-[236px] md:w-[546px] md:h-[413px] place-self-start; /* 780×0.7=546, 590×0.7=413 */
 }

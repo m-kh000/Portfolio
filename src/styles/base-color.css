@@ -38,7 +38,7 @@ user-select: none;
     @apply bg-gradient-to-b from-[#fffff0] to-[#ededea] md:to-[#] ;
   }
 
-  #menu, .card{ 
+  #menu , .card{ 
     @apply bg-[#fffff0];
   }
 

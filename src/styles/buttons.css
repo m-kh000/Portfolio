@@ -6,10 +6,18 @@
   button {
     transform: translateZ(0);
     will-change: transform;
-    @apply rounded-2xl cursor-pointer bg-[#b6b29c45] md:bg-[#8c79322e] p-[4px] md:p-[7px] text-[14px] md:text-[20px] text-center hover:scale-105 hover:translate-z-0 transition-all;
+    @apply !rounded-2xl cursor-pointer p-[4px] md:p-[7px] text-[14px] md:text-[20px] hover:scale-105 hover:translate-z-0 transition-all my-1;
   }
 
   a:hover {
     opacity: 0.70;
   }
+}
+
+button {
+  @apply bg-[#b6b29c45] md:bg-[#8c79321e] ;
+}
+
+body.darkmode button {
+  @apply bg-[#0e0e1141] md:bg-[#09090a4a];
 }

@@ -40,7 +40,7 @@
 }
 
 .cards-container {
-  @apply w-[97vw] md:w-[83vw];
+  @apply w-[92vw] md:w-[83vw];
   display: flex;
   overflow-x: auto;
   gap: 0.1px;

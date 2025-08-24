@@ -9,7 +9,7 @@ user-select: none;
   --color-vio: #7c5f83;
   --color-vio-dark-mode: #c4b0c4;
   --color-vio-darker-dark-mode: #e5d0f2;
-  --color-mob-voi: #756475;
+  --color-mob-voi: #756489;
 
 }
 
@@ -52,14 +52,14 @@ body.darkmode {
   color:#1B1C20;
 
   p, div {
-    @apply text-[#c0b3e6] md:text-vio-dark-mode;
+    @apply text-[#b3bae6] md:text-vio-dark-mode;
   }
   h1, h2{
-    @apply text-[#c0b3e6] md:text-vio-darker-dark-mode;
+    @apply text-[#b3bae6] md:text-vio-darker-dark-mode;
   }
 
   #mira {
-    @apply text-[#bba9e8] md:text-[#CE97DD];
+    @apply text-[#a9b2e8] md:text-[#CE97DD];
   }
 
   #toolbar {

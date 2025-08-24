@@ -184,7 +184,7 @@ function MyComponent({ isDarkMode, toggleMode, sidebarOpen, toggleSidebar }) {
                   href="https://chat.qwen.ai/c/29d202f2-57b2-4b27-a2be-b1f8fb4f116f"
                   target="_blank"
                 >
-                  @ Need Help
+                  @Need Help
                 </a>
               </p>
             </div>

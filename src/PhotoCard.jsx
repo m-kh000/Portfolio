@@ -9,7 +9,7 @@ function PhotoCard({r, img}) {
             <img src={img} className="photo-img opacity-0" />
           </div>
           
-          <div className='flex-1 flex items-center justify-center text-[170%]'>
+          <div className='flex-1 flex items-center justify-center text-[160%] md:text-[220%] text-center'>
             I can write text here
             </div>
 
@@ -17,7 +17,7 @@ function PhotoCard({r, img}) {
       ) : (
         <div className="photo-card-container">
         
-          <div className='flex-1 flex items-center justify-center text-[170%]'>
+          <div className='flex-1 flex items-center justify-center text-[160%] md:text-[220%] text-center'>
             I can write text here
             </div>
         <div className="photo-card">

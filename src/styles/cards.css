@@ -36,10 +36,11 @@
 .scrollable-cards-section {
   padding: 2rem 0;
   text-align: center;
+  @apply  float-left
 }
 
 .cards-container {
-  @apply w-[81vw] md:w-[91vw];
+  @apply w-[97vw] md:w-[83vw];
   display: flex;
   overflow-x: auto;
   gap: 0.1px;
